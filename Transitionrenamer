@@ -1,0 +1,9 @@
+import os
+
+for file in os.listdir(os.getcwd()):
+    if file == "transitionrenamer.py":
+        pass
+    fn = os.path.splitext(file)[0]
+    fn = fn.capitalize()
+    fn = fn.replace("_", " ")
+    os.rename(file, fn)
